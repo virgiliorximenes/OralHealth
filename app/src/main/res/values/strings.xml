@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">OralHealth</string>
+    <string name="title_activity_splash_screen">Oral Health Splash Screen</string>
+    <string name="splash_description">Oral Health Game</string>
+</resources>
