@@ -1,8 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="@drawable/background_menu"
     tools:context="br.com.virgiliorximenes.oralhealth.MainActivity">
 
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/activity_menu_vertical_margin"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/menuStart"
+            style="@style/MenuTheme"
+            android:layout_gravity="center"
+            android:text="@string/start_game" />
+
+        <TextView
+            android:id="@+id/menuConfig"
+            style="@style/MenuTheme"
+            android:layout_gravity="center"
+            android:text="@string/settings" />
+
+        <TextView
+            android:id="@+id/menuAbout"
+            style="@style/MenuTheme"
+            android:layout_gravity="center"
+            android:text="@string/about" />
+
+        <TextView
+            android:id="@+id/menuSair"
+            style="@style/MenuTheme"
+            android:layout_gravity="center"
+            android:text="@string/exit" />
+    </LinearLayout>
+</RelativeLayout>
