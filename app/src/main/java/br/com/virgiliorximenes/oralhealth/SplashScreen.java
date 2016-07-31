@@ -15,7 +15,6 @@ public class SplashScreen extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash_screen);
 
         new Timer().schedule(new TimerTask() {
             @Override
@@ -26,7 +25,7 @@ public class SplashScreen extends Activity {
                 intent.setClass(SplashScreen.this, MainActivity.class);
 
                 startActivity(intent);
-;            }
+            }
         }, SPLASH_TIME_OUT);
     }
 }
