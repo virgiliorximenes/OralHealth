@@ -3,6 +3,13 @@
     <string name="title_activity_splash_screen">Oral Health Splash Screen</string>
     <string name="splash_description">Oral Health Game</string>
 
+    <!-- Global Strings -->
+    <string name="game_name">Oral Health</string>
+    <string name="exit_game">Voce quer realmente sair do jogo?</string>
+    <string name="yes">Sim</string>
+    <string name="no">Nao</string>
+
+    <!-- Menu Items -->
     <string name="start_game">Iniciar</string>
     <string name="settings">Configurar</string>
     <string name="about">Sobre</string>
