@@ -4,13 +4,13 @@
         <shape android:shape="rectangle">
             <gradient
                 android:startColor="#AAAAAA"
-                android:endColor="#000077"
+                android:endColor="#FFFFFF"
                 android:angle="270" />
         </shape>
     </item>
 
     <item>
-        <bitmap android:src="@drawable/oral_health_logo"
+        <bitmap android:src="@drawable/new_oral_health_logo"
             android:gravity="center" />
     </item>
 </layer-list>
