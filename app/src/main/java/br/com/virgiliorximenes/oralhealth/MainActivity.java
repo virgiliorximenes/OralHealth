@@ -28,7 +28,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
         } else if (view.getId() == R.id.menuExit) {
             confirmAndExit();
         }
-
     }
 
     @Override

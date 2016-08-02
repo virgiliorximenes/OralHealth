@@ -9,7 +9,7 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/oral_health_logo"
+        android:src="@drawable/oral_health_name"
         android:layout_centerHorizontal="true"
         android:contentDescription="@string/splash_description"
         android:layout_margin="@dimen/activity_menu_vertical_margin"/>
