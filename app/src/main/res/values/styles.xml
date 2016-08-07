@@ -7,17 +7,23 @@
     </style>
 
     <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
-        <item name="android:windowBackground">@drawable/new_oral_health_logo</item>
-        <item name="android:colorBackground">@android:color/white</item>
+        <item name="android:background">@drawable/new_oral_health_logo</item>
+        <item name="android:windowExitTransition">@android:transition/slide_left</item>
+        <item name="android:duration">@android:integer/config_shortAnimTime</item>
     </style>
 
-    <style name="MenuTheme">
-        <item name="android:textColor">#FFFFFF</item>
+    <style name="MenuTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowEnterTransition">@android:transition/slide_right</item>
+        <item name="android:duration">@android:integer/config_shortAnimTime</item>
+    </style>
+
+    <style name="MenuOption">
+        <item name="android:textColor">@android:color/holo_red_dark</item>
         <item name="android:textStyle">bold|italic</item>
         <item name="android:clickable">true</item>
         <item name="android:layout_weight">0</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:gravity">center</item>
         <item name="android:textSize">@dimen/text_size_menu</item>

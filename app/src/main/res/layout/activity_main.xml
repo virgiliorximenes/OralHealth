@@ -1,48 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:orientation="vertical"
     android:background="@drawable/background_menu"
     tools:context="br.com.virgiliorximenes.oralhealth.MainActivity">
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/oral_health_name"
         android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/activity_menu_vertical_margin"
         android:contentDescription="@string/splash_description"
-        android:layout_margin="@dimen/activity_menu_vertical_margin"/>
+        android:src="@drawable/oral_health_name"
+        android:paddingBottom="@dimen/activity_vertical_margin"/>
+
+    <TextView
+        android:id="@+id/menuStart"
+        style="@style/MenuOption"
+        android:text="@string/start_game" />
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="@dimen/activity_menu_vertical_margin"
-        android:gravity="bottom"
-        android:orientation="vertical">
+        android:gravity="center|bottom"
+        android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/menuStart"
-            style="@style/MenuTheme"
-            android:layout_gravity="center"
-            android:text="@string/start_game" />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@android:dimen/dialog_min_width_minor"
+            android:layout_marginRight="@android:dimen/dialog_min_width_minor"
+            android:src="@drawable/music_button_active"
+            android:clickable="true"/>
 
-        <TextView
-            android:id="@+id/menuConfig"
-            style="@style/MenuTheme"
-            android:layout_gravity="center"
-            android:text="@string/settings" />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@android:dimen/dialog_min_width_minor"
+            android:layout_marginRight="@android:dimen/dialog_min_width_minor"
+            android:src="@drawable/sfx_button_active"
+            android:clickable="true"/>
 
-        <TextView
-            android:id="@+id/menuAbout"
-            style="@style/MenuTheme"
-            android:layout_gravity="center"
-            android:text="@string/about" />
-
-        <TextView
-            android:id="@+id/menuExit"
-            style="@style/MenuTheme"
-            android:layout_gravity="center"
-            android:text="@string/exit" />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@android:dimen/dialog_min_width_minor"
+            android:layout_marginRight="@android:dimen/dialog_min_width_minor"
+            android:src="@android:drawable/ic_menu_call"
+            android:clickable="true"/>
     </LinearLayout>
-</RelativeLayout>
+
+</LinearLayout>

@@ -12,21 +12,17 @@ public class MainActivity extends Activity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        showMain();
+    }
 
+    private void showMain() {
+        setContentView(R.layout.activity_main);
         findViewById(R.id.menuStart).setOnClickListener(this);
-        findViewById(R.id.menuConfig).setOnClickListener(this);
-        findViewById(R.id.menuAbout).setOnClickListener(this);
-        findViewById(R.id.menuExit).setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
         if (view.getId() == R.id.menuStart) {
-        } else if (view.getId() == R.id.menuConfig) {
-        } else if (view.getId() == R.id.menuAbout) {
-        } else if (view.getId() == R.id.menuExit) {
-            confirmAndExit();
         }
     }
 
@@ -40,15 +36,14 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 .setIcon(android.R.drawable.ic_dialog_alert)
                 .setTitle(R.string.game_name)
                 .setMessage(R.string.exit_game)
-                .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener()
-                {
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         finish();
                     }
 
                 })
-                .setNegativeButton(R.string.no, null)
+                .setNegativeButton(android.R.string.no, null)
                 .show();
     }
 
