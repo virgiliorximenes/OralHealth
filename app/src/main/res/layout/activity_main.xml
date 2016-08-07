@@ -18,9 +18,15 @@
 
     <TextView
         android:id="@+id/menuStart"
-        style="@style/MenuOption"
-        android:text="@string/start_game" />
-
+        android:textColor="@android:color/holo_orange_dark"
+        android:textStyle="bold|italic"
+        android:clickable="true"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="@dimen/text_size_menu"
+        android:text="@string/start_game"
+        android:layout_height="wrap_content" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -32,26 +38,28 @@
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@android:dimen/dialog_min_width_minor"
-            android:layout_marginRight="@android:dimen/dialog_min_width_minor"
-            android:src="@drawable/music_button_active"
-            android:clickable="true"/>
+            android:layout_marginRight="@dimen/padding_between_images"
+            android:src="@drawable/music_button_enabled"
+            android:background="@null"
+            android:clickable="true"
+            android:id="@+id/music_button"/>
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@android:dimen/dialog_min_width_minor"
-            android:layout_marginRight="@android:dimen/dialog_min_width_minor"
-            android:src="@drawable/sfx_button_active"
-            android:clickable="true"/>
+            android:src="@drawable/sfx_button_enabled"
+            android:background="@null"
+            android:clickable="true"
+            android:id="@+id/sfx_button"/>
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@android:dimen/dialog_min_width_minor"
-            android:layout_marginRight="@android:dimen/dialog_min_width_minor"
-            android:src="@android:drawable/ic_menu_call"
-            android:clickable="true"/>
+            android:layout_marginLeft="@dimen/padding_between_images"
+            android:src="@drawable/about_button"
+            android:background="@null"
+            android:clickable="true"
+            android:id="@+id/about_button"/>
     </LinearLayout>
 
 </LinearLayout>
