@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 
 public class MainActivity extends Activity implements View.OnClickListener {
 
@@ -39,20 +40,24 @@ public class MainActivity extends Activity implements View.OnClickListener {
             editor.putBoolean(getString(R.string.music), musicEnabled);
             editor.putBoolean(getString(R.string.sfx), sfxEnabled);
             editor.putInt(getString(R.string.app_name), 1);
-            editor.commit();
+            editor.apply();
 
         }
 
         if (musicEnabled) {
-            findViewById(R.id.music_button).setOnClickListener(this);
+            ImageButton musicButton = (ImageButton) findViewById(R.id.music_button);
+            musicButton.setImageResource(R.drawable.music_button_enabled);
         } else {
-            findViewById(R.id.music_button).setOnClickListener(this);
+            ImageButton musicButton = (ImageButton) findViewById(R.id.music_button);
+            musicButton.setImageResource(R.drawable.music_button_disabled);
         }
 
         if (sfxEnabled) {
-            findViewById(R.id.sfx_button).setOnClickListener(this);
+            ImageButton sfxButton = (ImageButton) findViewById(R.id.sfx_button);
+            sfxButton.setImageResource(R.drawable.sfx_button_enabled);
         } else {
-            findViewById(R.id.sfx_button).setOnClickListener(this);
+            ImageButton sfxButton = (ImageButton) findViewById(R.id.sfx_button);
+            sfxButton.setImageResource(R.drawable.sfx_button_disabled);
         }
 
 
@@ -61,7 +66,20 @@ public class MainActivity extends Activity implements View.OnClickListener {
     @Override
     public void onClick(View view) {
         if (view.getId() == R.id.menuStart) {
+            // TODO: Implement this method.
+        } else if (view.getId() == R.id.sfx_button) {
+            changeSfxState();
+        } else if (view.getId() == R.id.music_button) {
+            changeMusicState();
         }
+    }
+
+    private void changeSfxState() {
+        // TODO: Implement this method.
+    }
+
+    private void changeMusicState() {
+        // TODO: Implement this method.
     }
 
     @Override
