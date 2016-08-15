@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+	android:background="@drawable/background_menu"
+	android:duration="@android:integer/config_shortAnimTime"
+	android:windowEnterTransition="@android:transition/slide_right"
+    tools:context="br.com.virgiliorximenes.oralhealth.MenuActivity">
+    
+	<ImageView
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:scaleType="fitXY"
+		android:gravity="center"
+		android:adjustViewBounds="true"
+		android:layout_margin="@dimen/logo_margin"
+		android:paddingBottom="@dimen/logo_margin"
+		android:src="@drawable/oral_health_name"/>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:gravity="center">
+
+		<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/start_game"
+			android:textStyle="bold|italic"
+			android:textColor="@android:color/holo_red_dark"
+			android:textSize="@dimen/text_size_menu"
+			android:background="@drawable/button_shape"
+			android:id="@+id/menu_start"
+			android:clickable="true"/>
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="@dimen/activity_menu_vertical_margin"
+		android:gravity="center|bottom"
+		android:layout_alignParentBottom="true"
+		android:orientation="horizontal">
+
+		<ImageButton
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/about_button"
+			android:background="@null"
+			android:clickable="true"
+			android:id="@+id/about_button"/>
+
+	</LinearLayout>
+
+</RelativeLayout>
