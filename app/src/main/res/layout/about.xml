@@ -1,0 +1,33 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+	android:background="@drawable/background_menu"
+	android:duration="@android:integer/config_shortAnimTime"
+	android:windowEnterTransition="@android:transition/slide_right"
+    tools:context="br.com.virgiliorximenes.oralhealth.MenuActivity">
+    
+	<LinearLayout android:layout_height="fill_parent"
+		android:layout_width="fill_parent"
+		android:orientation="vertical">
+
+		<ImageView
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:scaleType="fitXY"
+			android:gravity="center"
+			android:adjustViewBounds="true"
+			android:layout_margin="@dimen/logo_margin"
+			android:paddingBottom="@dimen/logo_margin"
+			android:src="@drawable/oral_health_name"/>
+		
+		<TextView android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="@string/about"
+			android:textStyle="bold"
+			android:textSize="@dimen/text_size_about"
+			android:textColor="@android:color/holo_red_dark" />
+		
+	</LinearLayout>
+   
+</ScrollView>
