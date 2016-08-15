@@ -2,11 +2,15 @@
     <string name="app_name">OralHealth</string>
     <string name="title_activity_splash_screen">Oral Health Splash Screen</string>
     <string name="splash_description">Oral Health Game</string>
+    <string name="about_button">Sobre</string>
 	<string name="about">
-		Oral health é jogo sério (serious game) voltado para educação em saúde bucal.
+		Oral health é jogo sério (<i>serious game</i>) voltado para educação em saúde bucal.
 		Envolve a participação e interação de crianças e pais através de atividades interativas.
-		Traz como propósito ser um instrumento de apoio para construção do hábito e da técnica de escovação. 
-		O jogo promove também adoção de hábitos alimentares saudáveis, dicas das trocas da dentição decídua para permanente, lembretes de troca de escova e de visita ao dentista ambientado em um contexto lúdico, desafiador e imersivo.
+		Traz como propósito ser um instrumento de apoio para construção do hábito e da técnica de
+        escovação.
+		O jogo promove também adoção de hábitos alimentares saudáveis, dicas das trocas da dentição
+        decídua para permanente, lembretes de troca de escova e de visita ao dentista ambientado em
+        um contexto lúdico, desafiador e imersivo.
 	</string>
 
     <!-- Global Strings -->
@@ -16,7 +20,15 @@
     <!-- Menu Items -->
     <string name="start_game">Jogar</string>
 
+    <!-- Start options -->
+    <string name="choose_area">Escolha sua area</string>
+    <string name="option_father">Pai</string>
+    <string name="option_son">Filho</string>
+
+    <string name="welcome_father">Oi %1$s! Bem-vindo ao Oral Health! Vamos cuidar da saude bucal do seu filho?</string>
+
     <!-- Config -->
     <string name="music">music</string>
     <string name="sfx">sfx</string>
+
 </resources>
