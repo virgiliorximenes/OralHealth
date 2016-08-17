@@ -25,6 +25,10 @@
     <string name="option_father">Pai</string>
     <string name="option_son">Filho</string>
 
+    <string name="gender_male">Homem</string>
+    <string name="gender_female">Mulher</string>
+    <string name="choose_avatar">Escolher</string>
+
     <string name="welcome_father">Oi %1$s! Bem-vindo ao Oral Health! Vamos cuidar da saude bucal do seu filho?</string>
 
     <!-- Config -->

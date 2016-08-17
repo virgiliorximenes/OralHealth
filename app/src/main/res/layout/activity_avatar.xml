@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_menu"
+    android:orientation="vertical"
+    tools:context="br.com.virgiliorximenes.oralhealth.AvatarActivity">
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:id="@+id/gender_group">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_about"
+            android:textColor="@color/gender_male"
+            android:text="@string/gender_male"
+            android:checked="true"
+            android:id="@+id/gender_male"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_about"
+            android:textColor="@color/gender_female"
+            android:text="@string/gender_female"
+            android:id="@+id/gender_female"/>
+    </RadioGroup>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/avatar_image"
+        android:src="@drawable/avatar_boy"
+        android:adjustViewBounds="true"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        android:cropToPadding="true"
+        android:layout_margin="@dimen/avatar_margin_button" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_menu_vertical_margin"
+        android:gravity="center|bottom"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/choose_avatar"
+            android:textStyle="bold|italic"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="@dimen/text_size_about"
+            android:background="@drawable/button_shape"
+            android:id="@+id/choose_avatar"
+            android:clickable="true"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

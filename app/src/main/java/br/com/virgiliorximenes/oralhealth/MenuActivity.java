@@ -5,6 +5,7 @@ import android.accounts.AccountManager;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
@@ -52,8 +53,10 @@ public class MenuActivity extends Activity implements View.OnClickListener {
     }
 
     private void configureSon() {
-        // TODO: Implement this method
-        Toast.makeText(getApplicationContext(), "Not implemented yet!", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent();
+        intent.setClass(this, AvatarActivity.class);
+
+        startActivity(intent);
     }
 
     private void configureFather() {
