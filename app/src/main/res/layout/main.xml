@@ -1,10 +1,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-	android:orientation="vertical"
+    android:background="@drawable/new_oral_health_logo"
+    android:duration="@android:integer/config_shortAnimTime"
     android:gravity="center"
-	android:background="@drawable/new_oral_health_logo"
-	android:duration="@android:integer/config_shortAnimTime"
-	android:windowExitTransition="@android:transition/slide_left">
+    android:orientation="vertical"
+    android:windowExitTransition="@android:transition/slide_left"
+    tools:context="br.com.virgiliorximenes.oralhealth.MainActivity">
 
 </LinearLayout>

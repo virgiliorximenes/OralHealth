@@ -1,15 +1,13 @@
 package br.com.virgiliorximenes.oralhealth;
 
-import android.accounts.Account;
-import android.accounts.AccountManager;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Patterns;
 import android.view.View;
-import android.widget.Toast;
+
+import br.com.virgiliorximenes.oralhealth.utils.OralHealthUtilities;
 
 public class MenuActivity extends Activity implements View.OnClickListener {
 
@@ -56,21 +54,16 @@ public class MenuActivity extends Activity implements View.OnClickListener {
         Intent intent = new Intent();
         intent.setClass(this, AvatarActivity.class);
 
+        finish();
         startActivity(intent);
     }
 
     private void configureFather() {
-        String emailFather = null;
-        Account[] accounts = AccountManager.get(getApplicationContext()).getAccounts();
-        for (Account account : accounts) {
-            if (Patterns.EMAIL_ADDRESS.matcher(account.name).matches()) {
-                emailFather = account.name;
-            }
-        }
-        Toast.makeText(getApplicationContext(),
-                String.format(getResources().getString(R.string.welcome_father), emailFather),
-                Toast.LENGTH_SHORT).show();
-        // TODO: Implement this method
+        Intent intent = new Intent();
+        intent.setClass(this, FatherActivity.class);
+
+        finish();
+        startActivity(intent);
     }
 
     private void initMenu() {
@@ -92,18 +85,8 @@ public class MenuActivity extends Activity implements View.OnClickListener {
             initMenu();
 
         } else {
-            new AlertDialog.Builder(this)
-                    .setIcon(android.R.drawable.ic_dialog_alert)
-                    .setTitle(R.string.game_name)
-                    .setMessage(R.string.exit_game)
-                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            finish();
-                        }
-                    })
-                    .setNegativeButton(android.R.string.no, null)
-                    .show();
+            OralHealthUtilities.closeApp(this);
+
         }
     }
 

@@ -1,11 +1,12 @@
 package br.com.virgiliorximenes.oralhealth;
 
-import android.app.*;
-import android.os.*;
+import android.app.Activity;
+import android.os.Bundle;
 
-import java.util.*;
+import java.util.Timer;
+import java.util.TimerTask;
 
-import android.content.*;
+import br.com.virgiliorximenes.oralhealth.utils.OralHealthUtilities;
 
 public class MainActivity extends Activity {
 
@@ -17,12 +18,7 @@ public class MainActivity extends Activity {
         new Timer().schedule(new TimerTask() {
             @Override
             public void run() {
-                finish();
-
-                Intent intent = new Intent();
-                intent.setClass(MainActivity.this, MenuActivity.class);
-
-                startActivity(intent);
+                OralHealthUtilities.changeScreen(MainActivity.this, MenuActivity.class);
             }
         }, 1500);
     }

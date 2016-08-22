@@ -29,10 +29,15 @@
     <string name="gender_female">Mulher</string>
     <string name="choose_avatar">Escolher</string>
 
-    <string name="welcome_father">Oi %1$s! Bem-vindo ao Oral Health! Vamos cuidar da saude bucal do seu filho?</string>
+    <!-- Father Menu -->
+    <string name="monitoring_menu">Monitoria</string>
+    <string name="tutorial_menu">Tutorial</string>
+    <string name="know_more_menu">Saiba Mais</string>
 
-    <!-- Config -->
-    <string name="music">music</string>
-    <string name="sfx">sfx</string>
-
+    <!-- Tutorial Text -->
+    <string name="tutorial_partA">
+        Prezado pai/cuidador/responsavel, para que este aplicativo atinja seu maior proposito,
+        que e EDUCAR, e importante sua participacao e solicitamos sua atencao as seguintes
+        intrucoes:
+    </string>
 </resources>

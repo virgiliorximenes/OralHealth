@@ -2,32 +2,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-	android:background="@drawable/background_menu"
-	android:duration="@android:integer/config_shortAnimTime"
-	android:windowEnterTransition="@android:transition/slide_right"
+    android:background="@drawable/background_menu"
+    android:duration="@android:integer/config_shortAnimTime"
+    android:windowEnterTransition="@android:transition/slide_right"
     tools:context="br.com.virgiliorximenes.oralhealth.MenuActivity">
-    
-	<LinearLayout android:layout_height="fill_parent"
-		android:layout_width="fill_parent"
-		android:orientation="vertical">
 
-		<ImageView
-			android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:scaleType="fitXY"
-			android:gravity="center"
-			android:adjustViewBounds="true"
-			android:layout_margin="@dimen/logo_margin"
-			android:paddingBottom="@dimen/logo_margin"
-			android:src="@drawable/oral_health_name"/>
-		
-		<TextView android:layout_height="wrap_content"
-			android:layout_width="wrap_content"
-			android:text="@string/about"
-			android:textStyle="bold"
-			android:textSize="@dimen/text_size_about"
-			android:textColor="@android:color/holo_red_dark" />
-		
-	</LinearLayout>
-   
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/logo_margin"
+            android:adjustViewBounds="true"
+            android:gravity="center"
+            android:paddingBottom="@dimen/logo_margin"
+            android:scaleType="fitXY"
+            android:src="@drawable/oral_health_name" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:text="@string/about"
+            android:textColor="@android:color/holo_red_dark"
+            android:background="#44FFFFFF"
+            android:textSize="@dimen/text_size_about"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
 </ScrollView>

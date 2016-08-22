@@ -6,4 +6,6 @@
 
     <color name="gender_male">#0000FF</color>
     <color name="gender_female">#FF0081</color>
+
+    <color name="background_button">#77FFFFFF</color>
 </resources>
