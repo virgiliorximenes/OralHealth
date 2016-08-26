@@ -1,34 +1,40 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@drawable/background_menu"
     android:duration="@android:integer/config_shortAnimTime"
-    android:orientation="vertical"
     android:windowEnterTransition="@android:transition/slide_right"
     tools:context="br.com.virgiliorximenes.oralhealth.FatherActivity">
 
-
-    <ImageView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/logo_margin"
-        android:adjustViewBounds="true"
-        android:gravity="center"
-        android:paddingBottom="@dimen/logo_margin"
-        android:scaleType="fitXY"
-        android:src="@drawable/oral_health_name" />
-
     <TextView
+        android:id="@+id/tutorial_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/tutorial_partA"
-        android:textColor="@android:color/holo_red_dark"
-        android:layout_marginLeft="@dimen/activity_horizontal_margin"
-        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
         android:background="@color/background_button"
+        android:text="@string/tutorial_partA"
+        android:textColor="@android:color/black"
         android:textSize="@dimen/text_size_about"
         android:textStyle="bold" />
 
+    <Button
+        android:id="@+id/tutorial_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:background="@drawable/button_shape"
+        android:text="@string/advanced_button"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_size_about"
+        android:textStyle="bold" />
 
-</LinearLayout>
+</RelativeLayout>

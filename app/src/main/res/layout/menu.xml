@@ -28,10 +28,10 @@
             android:id="@+id/menu_start"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/background_button"
+            android:background="@drawable/button_shape"
             android:clickable="true"
             android:text="@string/start_game"
-            android:textColor="@android:color/holo_red_dark"
+            android:textColor="@android:color/black"
             android:textSize="@dimen/text_size_menu"
             android:textStyle="bold|italic" />
     </LinearLayout>

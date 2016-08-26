@@ -9,7 +9,7 @@
 
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <ImageView
@@ -17,6 +17,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/logo_margin"
             android:adjustViewBounds="true"
+            android:contentDescription="@string/game_name"
             android:gravity="center"
             android:paddingBottom="@dimen/logo_margin"
             android:scaleType="fitXY"
@@ -27,9 +28,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginRight="@dimen/activity_horizontal_margin"
-            android:text="@string/about"
-            android:textColor="@android:color/holo_red_dark"
             android:background="#44FFFFFF"
+            android:text="@string/about"
+            android:textColor="@android:color/black"
             android:textSize="@dimen/text_size_about"
             android:textStyle="bold" />
 
