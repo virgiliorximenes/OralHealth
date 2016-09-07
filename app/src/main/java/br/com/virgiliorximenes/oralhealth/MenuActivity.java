@@ -3,7 +3,6 @@ package br.com.virgiliorximenes.oralhealth;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -51,19 +50,11 @@ public class MenuActivity extends Activity implements View.OnClickListener {
     }
 
     private void configureSon() {
-        Intent intent = new Intent();
-        intent.setClass(this, AvatarActivity.class);
-
-        finish();
-        startActivity(intent);
+        OralHealthUtilities.changeScreen(this, AvatarActivity.class);
     }
 
     private void configureFather() {
-        Intent intent = new Intent();
-        intent.setClass(this, FatherActivity.class);
-
-        finish();
-        startActivity(intent);
+        OralHealthUtilities.changeScreen(this, FatherActivity.class);
     }
 
     private void initMenu() {

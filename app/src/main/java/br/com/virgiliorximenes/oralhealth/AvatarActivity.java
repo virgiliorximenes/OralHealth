@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import br.com.virgiliorximenes.oralhealth.utils.OralHealthUtilities;
+
 public class AvatarActivity extends Activity implements View.OnClickListener {
 
     @Override
@@ -27,5 +29,10 @@ public class AvatarActivity extends Activity implements View.OnClickListener {
         } else if (R.id.choose_avatar == view.getId()) {
             Toast.makeText(getApplicationContext(), "Not implement yet!", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        OralHealthUtilities.changeScreen(this, MenuActivity.class);
     }
 }

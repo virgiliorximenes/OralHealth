@@ -5,7 +5,7 @@
     <color name="colorAccent">#FF4081</color>
 
     <color name="gender_male">#0000FF</color>
-    <color name="gender_female">#FF0081</color>
+    <color name="gender_female">#CC00CC</color>
 
     <color name="background_button">#77FFFFFF</color>
 </resources>

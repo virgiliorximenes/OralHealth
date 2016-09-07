@@ -21,7 +21,7 @@
     <string name="start_game">Jogar</string>
 
     <!-- Start options -->
-    <string name="choose_area">Escolha sua area</string>
+    <string name="choose_area">Escolha sua área</string>
     <string name="option_father">Pai</string>
     <string name="option_son">Filho</string>
 
@@ -36,9 +36,9 @@
 
     <!-- Tutorial Text -->
     <string name="tutorial_partA">
-        Prezado pai/cuidador/responsavel, para que este aplicativo atinja seu maior proposito,
-        que e EDUCAR, e importante sua participacao e solicitamos sua atencao as seguintes
-        intrucoes:
+        Prezado pai/cuidador/responsável, para que este aplicativo atinja seu maior propósito,
+        que é EDUCAR, é importante sua participação e solicitamos sua atenção as seguintes
+        intruções:
     </string>
     <string name="tutorial_partB">
         1) Didaticamente, a boca pode ser dividida em 4 partes, chamadas de quadrantes: quandrante
@@ -47,37 +47,37 @@
     </string>
     <string name="tutorial_partC">
         2) Didaticamente, os dentes possuem as seguintes faces: no caso dos dentes anteriores,
-        encontramos a da frente e a de tras. No caso dos dentes posteriores, temos a face mastigatoria
-        (de cima), a face da bochecha e a da lingua. Todas as faces precisam ser escovadas. Todos
+        encontramos a da frente e a de tras. No caso dos dentes posteriores, temos a face mastigatória
+        (de cima), a face da bochecha e a da língua. Todas as faces precisam ser escovadas. Todos
         os lados dos dentes precisam ser escovados.
     </string>
     <string name="tutorial_partD">
-        3) O tempo de escovacao varia de acordo com a fase em que sua crianca se encontra. Ao iniciar
-        a escovacao, um cronometro e acionado no seu telefone e um sinal sonoro e emitido quando o
+        3) O tempo de escovação varia de acordo com a fase em que sua criança se encontra. Ao iniciar
+        a escovação, um cronômetro é acionado no seu telefone e um sinal sonoro é emitido quando o
         tempo estiver encerrado. O tempo precisa ser cumprido.
     </string>
     <string name="tutorial_partE">
-        4) Sua participacao, incentivo e exemplo sao essenciais para que a sua crianca crie habitos
-        saudaveis de higiene bucal. Lembre que a auto-estima de sua crianca esta em processo de
-        formacao, por isso, sua colaboracao e necessaria. Ter dentes saudaveis e bonitos fazem a sua
-        crianca ter auto-estima, crescer segura e estabelecer relacoes sociais saudaveis.
+        4) Sua participação, incentivo e exemplo são essenciais para que a sua criança crie hábitos
+        saudáveis de higiene bucal. Lembre que a auto-estima de sua criança está em processo de
+        formação, por isso, sua colaboração é necessária. Ter dentes saudáveis e bonitos fazem a sua
+        criança ter auto-estima, crescer segura e estabelecer relações sociais saudáveis.
     </string>
     <string name="tutorial_partF">
-        5) A crianca precisa ser educada em disciplina para seguir regras e condutas de convivio
-        familiar e social. Essa disciplina e importante para formacao do carater e da cidadania.
-        Ajude sua crianca nesse processo.
+        5) A criança precisa ser educada em disciplina para seguir regras e condutas de convívio
+        familiar e social. Essa disciplina é importante para formação do caráter e da cidadania.
+        Ajude sua criança nesse processo.
     </string>
     <string name="tutorial_partG">
-        6) Lembre-se sempre: o maior exemplo para sua crianca e voce. Criancas observam os pais e
+        6) Lembre-se sempre: o maior exemplo para sua criança é você. Crianças observam os pais e
         aprendem com seus comportamentos, gestos, palavras, tom de voz e exemplo. Seja o melhor de
-        "<b>GENTE DO BEM</b>" que sua crianca pode ter!
+        "<b>GENTE DO BEM</b>" que sua criança pode ter!
     </string>
     <string name="tutorial_partH">
-        7) Acreditamos no seu compromisso com a criacao de sua crianca. Acreditamos na sua
-        sinceridade e espontaneidade em querer o que e melhor para sua crianca. Queremos servir de
-        apoio e motivacao para que esses propositos sejam alcancados. Acreditamos na sua capacidade
-        e, por isso, colocamo-nos a disposicao para dialogos, quando necessarias. Email:
+        7) Acreditamos no seu compromisso com a criação de sua criança. Acreditamos na sua
+        sinceridade e espontaneidade em querer o que é melhor para sua criança. Queremos servir de
+        apoio e motivação para que esses propósitos sejam alcançados. Acreditamos na sua capacidade
+        e, por isso, colocamo-nos a disposição para dialogos, quando necessarias. Email:
         laila1alessia2@hotmail.com
     </string>
-    <string name="advanced_button">Avancar</string>
+    <string name="advanced_button">Avançar</string>
 </resources>

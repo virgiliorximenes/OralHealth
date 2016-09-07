@@ -7,21 +7,6 @@
     android:windowEnterTransition="@android:transition/slide_right"
     tools:context="br.com.virgiliorximenes.oralhealth.FatherActivity">
 
-    <TextView
-        android:id="@+id/tutorial_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
-        android:layout_marginEnd="@dimen/activity_horizontal_margin"
-        android:layout_marginStart="@dimen/activity_horizontal_margin"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:background="@color/background_button"
-        android:text="@string/tutorial_partA"
-        android:textColor="@android:color/black"
-        android:textSize="@dimen/text_size_about"
-        android:textStyle="bold" />
 
     <Button
         android:id="@+id/tutorial_button"
@@ -36,5 +21,28 @@
         android:textColor="@android:color/black"
         android:textSize="@dimen/text_size_about"
         android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_toEndOf="@id/tutorial_button"
+        android:background="@color/background_button">
+
+        <TextView
+            android:id="@+id/tutorial_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tutorial_partA"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_about"
+            android:textStyle="bold" />
+
+    </ScrollView>
 
 </RelativeLayout>
