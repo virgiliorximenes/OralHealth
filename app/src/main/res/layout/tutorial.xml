@@ -1,4 +1,4 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -7,42 +7,37 @@
     android:windowEnterTransition="@android:transition/slide_right"
     tools:context="br.com.virgiliorximenes.oralhealth.FatherActivity">
 
-
-    <Button
-        android:id="@+id/tutorial_button"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
-        android:layout_marginEnd="@dimen/activity_horizontal_margin"
-        android:background="@drawable/button_shape"
-        android:text="@string/advanced_button"
-        android:textColor="@android:color/black"
-        android:textSize="@dimen/text_size_about"
-        android:textStyle="bold" />
-
-    <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
         android:layout_marginEnd="@dimen/activity_horizontal_margin"
         android:layout_marginStart="@dimen/activity_horizontal_margin"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:layout_toEndOf="@id/tutorial_button"
-        android:background="@color/background_button">
+        android:background="@color/background_button"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/tutorial_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
             android:text="@string/tutorial_partA"
             android:textColor="@android:color/black"
             android:textSize="@dimen/text_size_about"
             android:textStyle="bold" />
 
-    </ScrollView>
+        <Button
+            android:id="@+id/tutorial_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:background="@drawable/button_shape"
+            android:text="@string/advanced_button"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_about"
+            android:textStyle="bold" />
 
-</RelativeLayout>
+    </LinearLayout>
+</ScrollView>
+

@@ -36,43 +36,52 @@
 
     <!-- Tutorial Text -->
     <string name="tutorial_partA">
+        Olá! Seja bem vindo ao Oral Health. Este é um aplicativo com um propósito educativo.
+        É muito comum as pessoas saberem o que fazer. Não é verdade? A questão é a prática,
+        ou seja, sabemos o que precisamos fazer, entretanto não fazemos.
+        Com a higiene bucal ocorre isso também. Sabemos que precisamos escovar os dentes
+        após as refeições. Mas muitas vezes não fazemos. Foi pensando nisso que esse
+        aplicativo foi desenvolvido. Faça bom proveito. Divirta-se. Cuidar bem é uma
+        demonstração de amor. E amar é o melhor caminho para educar.
+    </string>
+    <string name="tutorial_partB">
         Prezado pai/cuidador/responsável, para que este aplicativo atinja seu maior propósito,
         que é EDUCAR, é importante sua participação e solicitamos sua atenção as seguintes
         intruções:
     </string>
-    <string name="tutorial_partB">
+    <string name="tutorial_partC">
         1) Didaticamente, a boca pode ser dividida em 4 partes, chamadas de quadrantes: quandrante
         superior direito, quandrante superior esquerdo, quandrante inferior direito e quandrante
         inferior esquerdo. Todos os quadrantes precisam ser escovados.
     </string>
-    <string name="tutorial_partC">
+    <string name="tutorial_partD">
         2) Didaticamente, os dentes possuem as seguintes faces: no caso dos dentes anteriores,
         encontramos a da frente e a de tras. No caso dos dentes posteriores, temos a face mastigatória
         (de cima), a face da bochecha e a da língua. Todas as faces precisam ser escovadas. Todos
         os lados dos dentes precisam ser escovados.
     </string>
-    <string name="tutorial_partD">
+    <string name="tutorial_partE">
         3) O tempo de escovação varia de acordo com a fase em que sua criança se encontra. Ao iniciar
         a escovação, um cronômetro é acionado no seu telefone e um sinal sonoro é emitido quando o
         tempo estiver encerrado. O tempo precisa ser cumprido.
     </string>
-    <string name="tutorial_partE">
+    <string name="tutorial_partF">
         4) Sua participação, incentivo e exemplo são essenciais para que a sua criança crie hábitos
         saudáveis de higiene bucal. Lembre que a auto-estima de sua criança está em processo de
         formação, por isso, sua colaboração é necessária. Ter dentes saudáveis e bonitos fazem a sua
         criança ter auto-estima, crescer segura e estabelecer relações sociais saudáveis.
     </string>
-    <string name="tutorial_partF">
+    <string name="tutorial_partG">
         5) A criança precisa ser educada em disciplina para seguir regras e condutas de convívio
         familiar e social. Essa disciplina é importante para formação do caráter e da cidadania.
         Ajude sua criança nesse processo.
     </string>
-    <string name="tutorial_partG">
+    <string name="tutorial_partH">
         6) Lembre-se sempre: o maior exemplo para sua criança é você. Crianças observam os pais e
         aprendem com seus comportamentos, gestos, palavras, tom de voz e exemplo. Seja o melhor de
         "<b>GENTE DO BEM</b>" que sua criança pode ter!
     </string>
-    <string name="tutorial_partH">
+    <string name="tutorial_partI">
         7) Acreditamos no seu compromisso com a criação de sua criança. Acreditamos na sua
         sinceridade e espontaneidade em querer o que é melhor para sua criança. Queremos servir de
         apoio e motivação para que esses propósitos sejam alcançados. Acreditamos na sua capacidade
@@ -80,4 +89,6 @@
         laila1alessia2@hotmail.com
     </string>
     <string name="advanced_button">Avançar</string>
+    <string name="tips_menu">Dicas</string>
+    <string name="field_cpf">Informe seu CPF</string>
 </resources>

@@ -4,8 +4,11 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.TextView;
 
+import br.com.virgiliorximenes.oralhealth.database.OralHealthDAO;
 import br.com.virgiliorximenes.oralhealth.utils.OralHealthUtilities;
 
 public class MenuActivity extends Activity implements View.OnClickListener {
@@ -54,6 +57,38 @@ public class MenuActivity extends Activity implements View.OnClickListener {
     }
 
     private void configureFather() {
+        if (!OralHealthDAO.getInstance(this).hasParent()) {
+
+            LayoutInflater inflater = LayoutInflater.from(this);
+            View inflate = inflater.inflate(R.layout.register_father, null);
+
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setView(inflate);
+
+            final TextView fatherCpf = (TextView) inflate.findViewById(R.id.father_cpf);
+
+            builder.setCancelable(false)
+                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            OralHealthDAO.getInstance(MenuActivity.this).insertParent(fatherCpf.getText().toString());
+                        }
+
+                    })
+                    .setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
+
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            dialogInterface.cancel();
+                        }
+
+                    })
+                    .create()
+                    .show();
+
+        }
+
         OralHealthUtilities.changeScreen(this, FatherActivity.class);
     }
 
