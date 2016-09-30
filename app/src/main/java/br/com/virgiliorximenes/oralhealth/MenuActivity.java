@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import br.com.virgiliorximenes.oralhealth.database.OralHealthDAO;
 import br.com.virgiliorximenes.oralhealth.utils.OralHealthUtilities;
@@ -15,11 +16,14 @@ public class MenuActivity extends Activity implements View.OnClickListener {
 
     private boolean showAbout;
 
+    private OralHealthDAO oralHealthDAO;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         initMenu();
 
+        oralHealthDAO = OralHealthDAO.getInstance(this);
     }
 
     @Override
@@ -53,11 +57,16 @@ public class MenuActivity extends Activity implements View.OnClickListener {
     }
 
     private void configureSon() {
-        OralHealthUtilities.changeScreen(this, AvatarActivity.class);
+        if (!oralHealthDAO.hasParent()) {
+            Toast.makeText(this, "Ainda nao pode jogar!", Toast.LENGTH_SHORT).show();
+        } else {
+            OralHealthUtilities.changeScreen(this, AvatarActivity.class);
+
+        }
     }
 
     private void configureFather() {
-        if (!OralHealthDAO.getInstance(this).hasParent()) {
+        if (!oralHealthDAO.hasParent()) {
 
             LayoutInflater inflater = LayoutInflater.from(this);
             View inflate = inflater.inflate(R.layout.register_father, null);
@@ -72,7 +81,7 @@ public class MenuActivity extends Activity implements View.OnClickListener {
 
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
-                            OralHealthDAO.getInstance(MenuActivity.this).insertParent(fatherCpf.getText().toString());
+                            oralHealthDAO.insertParent(fatherCpf.getText().toString());
                         }
 
                     })
