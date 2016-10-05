@@ -58,7 +58,7 @@ public class MenuActivity extends Activity implements View.OnClickListener {
 
     private void configureSon() {
         if (!oralHealthDAO.hasParent()) {
-            Toast.makeText(this, "Ainda nao pode jogar!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.son_permission_denied, Toast.LENGTH_SHORT).show();
         } else {
             OralHealthUtilities.changeScreen(this, AvatarActivity.class);
 

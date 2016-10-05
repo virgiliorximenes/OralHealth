@@ -91,4 +91,5 @@
     <string name="advanced_button">Avançar</string>
     <string name="tips_menu">Dicas</string>
     <string name="field_cpf">Informe seu CPF</string>
+    <string name="son_permission_denied">Você só pode jogar depois que seu responsável efetuar o cadastro.</string>
 </resources>
