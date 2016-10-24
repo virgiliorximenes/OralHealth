@@ -23,6 +23,7 @@ public class FatherActivity extends Activity implements View.OnClickListener {
         setContentView(R.layout.activity_father);
         findViewById(R.id.tutorial_menu).setOnClickListener(this);
         findViewById(R.id.know_more_menu).setOnClickListener(this);
+        findViewById(R.id.tips_menu).setOnClickListener(this);
         tutorialPage = false;
         currentTutorialPage = 0;
     }
@@ -35,6 +36,9 @@ public class FatherActivity extends Activity implements View.OnClickListener {
                 break;
             case R.id.know_more_menu:
                 Toast.makeText(this, getString(R.string.know_more_menu), Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.tips_menu:
+                Toast.makeText(this, getString(R.string.tips_menu), Toast.LENGTH_SHORT).show();
                 break;
             case R.id.tutorial_button:
                 nextPage();

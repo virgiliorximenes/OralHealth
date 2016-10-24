@@ -32,7 +32,7 @@
     <!-- Father Menu -->
     <string name="monitoring_menu">Monitoria</string>
     <string name="tutorial_menu">Tutorial</string>
-    <string name="know_more_menu">Saiba Mais</string>
+    <string name="know_more_menu">Saiba +</string>
 
     <!-- Tutorial Text -->
     <string name="tutorial_partA">
@@ -88,6 +88,64 @@
         e, por isso, colocamo-nos a disposição para dialogos, quando necessarias. Email:
         laila1alessia2@hotmail.com
     </string>
+
+    <string name="tip_phase_2">
+        FASE 2
+        Nesta fase a criança realizará os mesmos movimentos de escovação que na FASE 1.
+        O tempo também é o mesmo. O Diagrama de Cores indica os quadrantes que precisam
+        ser escovados. É só seguir a sequência que está em destaque. Boa sorte! Divirta-se!
+    </string>
+    <string name="tip_phase_3">
+        FASE 3
+        Nesta fase o tempo de escovação é de 40 segundos. Mas não se preocupe.
+        O aplicativo emitirá um sinal sonoro quando for o tempo de terminar.
+        Esteja atento ao Diagrama de Cores.
+    </string>
+    <string name="tip_phase_4">
+        FASE 4
+        Nesta fase o tempo de escovação é de 01 minuto. Mas não se preocupe.
+        O aplicativo emitirá um sinal sonoro quando for o tempo de terminar.
+        Esteja atento ao Diagrama de Cores.
+    </string>
+
+    <string name="know_more_title_A">CÁRIE DENTÁRIA</string>
+    <string name="know_more_content_A">
+        É uma doença transmissível. Vários fatores podem causar a cárie dentária.
+        Entre eles: fatores hereditários, higiene inadequada, excesso de consumo de alimentos doces.
+        A cárie dentária pode ser prevenida. Para isso, visite o dentista regularmente, mantenha uma
+        boa higiene bucal e evite excesso de alimentos açucarados.
+    </string>
+    <string name="know_more_title_B">DENTIÇÃO MISTA</string>
+    <string name="know_more_content_B">
+        Os dentes de leite são substituídos pelos dentes permanentes. Geralmente essa mudança ocorre
+        aos 6 anos. Mas podemos ter um variação de 6 meses aproximadamente. Então a queda dos dentes
+        de leite pode iniciar aos 5 anos e meio ou pode iniciar aos 6 anos e meio. Os dentes de
+        leite são substituídos aos poucos. Nessa fase, a criança está com dentes de leite e dentes
+        permanentes. É por isso que essa fase é chamada de DENTIÇÃO MISTA. Na imagem a seguir, você
+        saberá a idade aproximada da queda dos dentes de leite.
+    </string>
+    <string name="know_more_title_C">ALIMENTAÇÃO SAUDÁVEL</string>
+    <string name="know_more_content_C">
+        Procure consumir mais frutas, verduras e legumes. Eles ajudam a manter os dentes limpos por
+        serem alimentos ricos em fibras. Ajudam também no crescimento e fortalecimento de ossos e
+        dentes. Evite alimentos industrializados. Geralmente eles possuem excesso de açúcares e
+        gorduras. Comer é muito bom, não é mesmo!? E sabemos que, em tudo na vida, o equilíbrio
+        é importante. Todo excesso pode ser prejudicial. Por isso, seja equilibrado quando o assunto
+        é alimentação saudável.
+    </string>
+    <string name="know_more_title_D">REGRA DOS DOCES</string>
+    <string name="know_more_content_D">
+        Você já sabe que, em tudo na vida, o equilíbrio é importante e que todo excesso pode ser
+        prejudicial. Na infância, um dos alimentos que mais são consumidos pelas crianças são os
+        doces. Nas suas mais diversas apresentações: recheados, sorvetes, bombons, chicletes e por
+        aí vai. Você também já sabe que esses alimentos são prejudiciais para os dentes. Foi
+        pensando nisso, que sugerimos a REGRA DOS DOCES. É assim: procure consumir doces e
+        guloseimas somente nas festas ou em datas comemorativas. Exemplos: aniversário de
+        coleguinhas, familiares, Páscoa, Dia das Crianças, festividades na Escola, Natal. Siga essa
+        regra. Você verá os resultados maravilhosos na saúde bucal de sua criança. Lembre sempre
+        disto: cuidar é uma forma de amar, e amar é a melhor forma de educar.
+    </string>
+
     <string name="advanced_button">Avançar</string>
     <string name="tips_menu">Dicas</string>
     <string name="field_cpf">Informe seu CPF</string>

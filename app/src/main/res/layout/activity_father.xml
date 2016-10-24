@@ -1,65 +1,76 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="@drawable/background_menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:baselineAligned="true"
     android:duration="@android:integer/config_shortAnimTime"
+    android:orientation="horizontal"
+    android:weightSum="10"
     android:windowEnterTransition="@android:transition/slide_right"
     tools:context="br.com.virgiliorximenes.oralhealth.FatherActivity">
 
-    <ImageView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/logo_margin"
-        android:adjustViewBounds="true"
-        android:contentDescription="@string/game_name"
-        android:gravity="center"
-        android:paddingBottom="@dimen/logo_margin"
-        android:scaleType="fitXY"
-        android:src="@drawable/oral_health_name" />
-
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:layout_weight="4">
 
-        <TextView
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="top|start"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/game_name"
+            android:src="@drawable/background" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="6">
+
+        <Button
             android:id="@+id/tutorial_menu"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_menu_vertical_margin"
+            android:layout_centerHorizontal="true"
             android:background="@drawable/button_shape"
             android:clickable="true"
             android:text="@string/tutorial_menu"
             android:textColor="@android:color/black"
             android:textSize="@dimen/text_size_menu"
-            android:textStyle="bold" />
+            android:textStyle="bold|italic" />
 
-        <TextView
+        <Button
             android:id="@+id/know_more_menu"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
             android:background="@drawable/button_shape"
             android:clickable="true"
             android:text="@string/know_more_menu"
             android:textColor="@android:color/black"
             android:textSize="@dimen/text_size_menu"
-            android:textStyle="bold" />
+            android:textStyle="bold|italic" />
 
-        <TextView
+        <Button
             android:id="@+id/tips_menu"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/activity_menu_vertical_margin"
             android:background="@drawable/button_shape"
             android:clickable="true"
             android:text="@string/tips_menu"
             android:textColor="@android:color/black"
             android:textSize="@dimen/text_size_menu"
-            android:textStyle="bold" />
+            android:textStyle="bold|italic" />
 
-    </LinearLayout>
+    </RelativeLayout>
 
 
-</RelativeLayout>
+</LinearLayout>

@@ -6,7 +6,7 @@
     <integer name="button_gradient_angle">90</integer>
     <dimen name="avatar_margin_button">60sp</dimen>
 
-    <dimen name="text_size_menu">50sp</dimen>
+    <dimen name="text_size_menu">40sp</dimen>
     <dimen name="text_size_about">30sp</dimen>
 
     <!-- Default screen margins, per the Android Design guidelines. -->

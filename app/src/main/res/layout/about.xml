@@ -1,30 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="@drawable/background_menu"
-    android:duration="@android:integer/config_shortAnimTime"
-    android:windowEnterTransition="@android:transition/slide_right"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="vertical"
+    android:scrollbarStyle="insideInset"
+    android:background="@drawable/background"
     tools:context="br.com.virgiliorximenes.oralhealth.MenuActivity">
 
-    <LinearLayout
-        android:layout_width="fill_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
-        android:layout_marginLeft="@dimen/activity_horizontal_margin"
-        android:layout_marginRight="@dimen/activity_horizontal_margin"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_margin="@dimen/activity_horizontal_margin"
         android:background="@color/background_button"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/about"
-            android:textColor="@android:color/black"
-            android:textSize="@dimen/text_size_about"
-            android:textStyle="bold" />
-
-    </LinearLayout>
+        android:text="@string/about"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_size_about"
+        android:textStyle="bold" />
 
 </ScrollView>
+
+

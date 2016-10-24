@@ -10,12 +10,12 @@
         android:icon="@mipmap/oh_launcher"
         android:isGame="true"
         android:label="@string/app_name"
-        android:screenOrientation="portrait"
+        android:screenOrientation="landscape"
         android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:screenOrientation="portrait">
+            android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,9 +25,9 @@
         <activity
             android:name=".MenuActivity"
             android:label="@string/app_name"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="landscape" />
         <activity android:name=".AvatarActivity" />
-        <activity android:name=".FatherActivity"></activity>
+        <activity android:name=".FatherActivity" android:screenOrientation="landscape" />
     </application>
 
 </manifest>

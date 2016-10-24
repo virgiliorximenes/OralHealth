@@ -1,47 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="@drawable/background_menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:baselineAligned="true"
     android:duration="@android:integer/config_shortAnimTime"
+    android:orientation="horizontal"
+    android:weightSum="10"
     android:windowEnterTransition="@android:transition/slide_right"
     tools:context="br.com.virgiliorximenes.oralhealth.MenuActivity">
 
-    <ImageView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/logo_margin"
-        android:adjustViewBounds="true"
-        android:contentDescription="@string/game_name"
-        android:gravity="center"
-        android:paddingBottom="@dimen/logo_margin"
-        android:scaleType="fitXY"
-        android:src="@drawable/oral_health_name" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="4">
 
-    <Button
-        android:id="@+id/menu_start"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:background="@drawable/button_shape"
-        android:clickable="true"
-        android:text="@string/start_game"
-        android:textColor="@android:color/black"
-        android:textSize="@dimen/text_size_menu"
-        android:textStyle="bold|italic" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="top|start"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/game_name"
+            android:src="@drawable/background" />
+    </RelativeLayout>
 
-    <ImageButton
-        android:id="@+id/about_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="@dimen/activity_menu_vertical_margin"
-        android:background="@null"
-        android:clickable="true"
-        android:contentDescription="@string/about_button"
-        android:src="@drawable/about_button" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="6">
 
-</RelativeLayout>
+        <Button
+            android:id="@+id/menu_start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/activity_menu_vertical_margin"
+            android:background="@drawable/button_shape"
+            android:clickable="true"
+            android:text="@string/start_game"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_menu"
+            android:textStyle="bold|italic" />
+
+        <Button
+            android:id="@+id/about_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/activity_menu_vertical_margin"
+            android:background="@drawable/button_shape"
+            android:clickable="true"
+            android:text="@string/about_button"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_menu"
+            android:textStyle="bold|italic" />
+    </RelativeLayout>
+
+</LinearLayout>

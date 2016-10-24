@@ -15,14 +15,17 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-        new Timer().schedule(new ChangeScreen(), 1500);
+        new Timer().schedule(new TimerTask(){
+
+            /**
+             * The task to run should be specified in the implementation of the {@code run()}
+             * method.
+             */
+            @Override
+            public void run() {
+                OralHealthUtilities.changeScreen(MainActivity.this, MenuActivity.class);
+            }
+        }, 1500);
     }
 
-    private class ChangeScreen extends TimerTask {
-
-        @Override
-        public void run() {
-            OralHealthUtilities.changeScreen(MainActivity.this, MenuActivity.class);
-        }
-    }
 }
