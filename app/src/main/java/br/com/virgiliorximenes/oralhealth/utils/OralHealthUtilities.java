@@ -5,12 +5,8 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 
-import br.com.virgiliorximenes.oralhealth.MenuActivity;
 import br.com.virgiliorximenes.oralhealth.R;
 
-/**
- * Created by virgilio on 20/08/16.
- */
 public class OralHealthUtilities {
 
 

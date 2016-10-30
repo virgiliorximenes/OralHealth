@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -57,19 +56,22 @@ public class MenuActivity extends Activity implements View.OnClickListener {
     }
 
     private void configureSon() {
-        if (!oralHealthDAO.hasParent()) {
-            Toast.makeText(this, R.string.son_permission_denied, Toast.LENGTH_SHORT).show();
-        } else {
+        if (oralHealthDAO.hasParent()) {
             OralHealthUtilities.changeScreen(this, AvatarActivity.class);
+        } else {
+            Toast.makeText(this, R.string.son_permission_denied, Toast.LENGTH_SHORT).show();
 
         }
     }
 
     private void configureFather() {
-        if (!oralHealthDAO.hasParent()) {
 
-            LayoutInflater inflater = LayoutInflater.from(this);
-            View inflate = inflater.inflate(R.layout.register_father, null);
+        if (oralHealthDAO.hasParent()) {
+            OralHealthUtilities.changeScreen(this, FatherActivity.class);
+
+        } else {
+
+            View inflate = View.inflate(this, R.layout.register_father, null);
 
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setView(inflate);
@@ -81,7 +83,14 @@ public class MenuActivity extends Activity implements View.OnClickListener {
 
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
-                            oralHealthDAO.insertParent(fatherCpf.getText().toString());
+                            String cpf = fatherCpf.getText().toString();
+                            if (cpf.trim().isEmpty()) {
+                                Toast.makeText(MenuActivity.this, R.string.required_cpf, Toast.LENGTH_SHORT).show();
+                            } else {
+                                oralHealthDAO.insertParent(fatherCpf.getText().toString());
+                                dialogInterface.dismiss();
+                                OralHealthUtilities.changeScreen(MenuActivity.this, FatherActivity.class);
+                            }
                         }
 
                     })
@@ -97,8 +106,6 @@ public class MenuActivity extends Activity implements View.OnClickListener {
                     .show();
 
         }
-
-        OralHealthUtilities.changeScreen(this, FatherActivity.class);
     }
 
     private void initMenu() {
@@ -125,4 +132,9 @@ public class MenuActivity extends Activity implements View.OnClickListener {
         }
     }
 
+    @Override
+    protected void onDestroy() {
+        OralHealthDAO.getInstance(this).close();
+        super.onDestroy();
+    }
 }

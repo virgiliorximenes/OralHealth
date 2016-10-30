@@ -6,17 +6,27 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import br.com.virgiliorximenes.oralhealth.database.OralHealthDAO;
 import br.com.virgiliorximenes.oralhealth.utils.OralHealthUtilities;
 
 public class FatherActivity extends Activity implements View.OnClickListener {
 
-    private int currentTutorialPage;
-    private boolean tutorialPage;
+    private static final int MENU = 100;
+    private static final int TUTORIAL = 200;
+    private static final int KNOW_MORE = 300;
+    private static final int TIPS = 400;
+
+    private int actualPhase;
+    private int currentPage;
+    private int activityScreen;
+    private OralHealthDAO oralHealthDAO;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         configureFatherMenu();
+
+        oralHealthDAO = OralHealthDAO.getInstance(this);
     }
 
     private void configureFatherMenu() {
@@ -24,8 +34,7 @@ public class FatherActivity extends Activity implements View.OnClickListener {
         findViewById(R.id.tutorial_menu).setOnClickListener(this);
         findViewById(R.id.know_more_menu).setOnClickListener(this);
         findViewById(R.id.tips_menu).setOnClickListener(this);
-        tutorialPage = false;
-        currentTutorialPage = 0;
+        activityScreen = MENU;
     }
 
     @Override
@@ -35,10 +44,10 @@ public class FatherActivity extends Activity implements View.OnClickListener {
                 configureTutorial();
                 break;
             case R.id.know_more_menu:
-                Toast.makeText(this, getString(R.string.know_more_menu), Toast.LENGTH_SHORT).show();
+                configureKnowMore();
                 break;
             case R.id.tips_menu:
-                Toast.makeText(this, getString(R.string.tips_menu), Toast.LENGTH_SHORT).show();
+                configureTips();
                 break;
             case R.id.tutorial_button:
                 nextPage();
@@ -46,18 +55,113 @@ public class FatherActivity extends Activity implements View.OnClickListener {
         }
     }
 
-    private void nextPage() {
-        if (currentTutorialPage == 7) {
-            configureFatherMenu();
+    private void configureTips() {
+        if (oralHealthDAO.hasChild()) {
+            actualPhase = oralHealthDAO.getActualPhase();
+
+            if (actualPhase == 0 || actualPhase == 1) {
+                Toast.makeText(this, getString(R.string.not_enough_phase), Toast.LENGTH_SHORT).show();
+            } else {
+                setContentView(R.layout.tutorial);
+                findViewById(R.id.tutorial_button).setOnClickListener(this);
+                activityScreen = TIPS;
+                currentPage = 0;
+
+                ((TextView) findViewById(R.id.tutorial_text)).setText(R.string.tip_phase_2);
+            }
         } else {
-            currentTutorialPage++;
-            showPageTutorial();
+            Toast.makeText(this, getString(R.string.father_permission_denied), Toast.LENGTH_SHORT).show();
         }
     }
 
-    private void showPageTutorial() {
+    private void configureKnowMore() {
+        if (oralHealthDAO.hasChild()) {
+            actualPhase = oralHealthDAO.getActualPhase();
+
+            setContentView(R.layout.tutorial);
+            findViewById(R.id.tutorial_button).setOnClickListener(this);
+            activityScreen = KNOW_MORE;
+            currentPage = 0;
+
+            ((TextView) findViewById(R.id.tutorial_text)).setText(R.string.know_more_content_A);
+        } else {
+            Toast.makeText(this, getString(R.string.father_permission_denied), Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private void nextPage() {
+        if (activityScreen == TUTORIAL) {
+            if (currentPage == 7) {
+                configureFatherMenu();
+            } else {
+                currentPage++;
+                nextPageTutorial();
+            }
+        } else if (activityScreen == KNOW_MORE) {
+            if (currentPage == 3) {
+                configureFatherMenu();
+            } else {
+                if (currentPage >= actualPhase) {
+                    Toast.makeText(this, getString(R.string.not_enough_phase), Toast.LENGTH_SHORT).show();
+                } else {
+                    currentPage++;
+                    nextPageKnowMore();
+                }
+            }
+        } else if (activityScreen == TIPS) {
+            if (currentPage == 2) {
+                configureFatherMenu();
+            } else {
+                if (currentPage + 2 >= actualPhase) {
+                    Toast.makeText(this, getString(R.string.not_enough_phase), Toast.LENGTH_SHORT).show();
+                } else {
+                    currentPage++;
+                    nextPageTips();
+                }
+            }
+        }
+    }
+
+    private void nextPageTips() {
         int page = 0;
-        switch (currentTutorialPage) {
+        switch (currentPage) {
+            case 0:
+                page = R.string.tip_phase_2;
+                break;
+            case 1:
+                page = R.string.tip_phase_3;
+                break;
+            case 2:
+                page = R.string.tip_phase_4;
+                break;
+        }
+
+        ((TextView) findViewById(R.id.tutorial_text)).setText(page);
+    }
+
+    private void nextPageKnowMore() {
+        int page = 0;
+        switch (currentPage) {
+            case 0:
+                page = R.string.know_more_content_A;
+                break;
+            case 1:
+                page = R.string.know_more_content_B;
+                break;
+            case 2:
+                page = R.string.know_more_content_C;
+                break;
+            case 3:
+                page = R.string.know_more_content_D;
+                break;
+        }
+
+        ((TextView) findViewById(R.id.tutorial_text)).setText(page);
+    }
+
+    private void nextPageTutorial() {
+        int page = 0;
+        switch (currentPage) {
             case 0:
                 page = R.string.tutorial_partA;
                 break;
@@ -91,14 +195,15 @@ public class FatherActivity extends Activity implements View.OnClickListener {
     private void configureTutorial() {
         setContentView(R.layout.tutorial);
         findViewById(R.id.tutorial_button).setOnClickListener(this);
-        tutorialPage = true;
-        currentTutorialPage = 0;
+        activityScreen = TUTORIAL;
+        currentPage = 0;
 
+        ((TextView) findViewById(R.id.tutorial_text)).setText(R.string.tutorial_partA);
     }
 
     @Override
     public void onBackPressed() {
-        if (tutorialPage) {
+        if (activityScreen == TUTORIAL || activityScreen == KNOW_MORE || activityScreen == TIPS) {
             previousPage();
         } else {
             OralHealthUtilities.changeScreen(this, MenuActivity.class);
@@ -106,11 +211,17 @@ public class FatherActivity extends Activity implements View.OnClickListener {
     }
 
     private void previousPage() {
-        if (currentTutorialPage == 0) {
+        if (currentPage == 0) {
             configureFatherMenu();
         } else {
-            currentTutorialPage--;
-            showPageTutorial();
+            currentPage--;
+            if (activityScreen == TUTORIAL) {
+                nextPageTutorial();
+            } else if (activityScreen == TIPS) {
+                nextPageTips();
+            } else if (activityScreen == KNOW_MORE) {
+                nextPageKnowMore();
+            }
         }
 
     }

@@ -108,33 +108,36 @@
         Esteja atento ao Diagrama de Cores.
     </string>
 
-    <string name="know_more_title_A">CÁRIE DENTÁRIA</string>
     <string name="know_more_content_A">
+        CÁRIE DENTÁRIA \n
         É uma doença transmissível. Vários fatores podem causar a cárie dentária.
         Entre eles: fatores hereditários, higiene inadequada, excesso de consumo de alimentos doces.
         A cárie dentária pode ser prevenida. Para isso, visite o dentista regularmente, mantenha uma
-        boa higiene bucal e evite excesso de alimentos açucarados.
+        boa higiene bucal e evite excesso de alimentos açucarados. \n
+        1 de 4
     </string>
-    <string name="know_more_title_B">DENTIÇÃO MISTA</string>
     <string name="know_more_content_B">
+        DENTIÇÃO MISTA \n
         Os dentes de leite são substituídos pelos dentes permanentes. Geralmente essa mudança ocorre
         aos 6 anos. Mas podemos ter um variação de 6 meses aproximadamente. Então a queda dos dentes
         de leite pode iniciar aos 5 anos e meio ou pode iniciar aos 6 anos e meio. Os dentes de
         leite são substituídos aos poucos. Nessa fase, a criança está com dentes de leite e dentes
         permanentes. É por isso que essa fase é chamada de DENTIÇÃO MISTA. Na imagem a seguir, você
-        saberá a idade aproximada da queda dos dentes de leite.
+        saberá a idade aproximada da queda dos dentes de leite. \n
+        2 de 4
     </string>
-    <string name="know_more_title_C">ALIMENTAÇÃO SAUDÁVEL</string>
     <string name="know_more_content_C">
+        ALIMENTAÇÃO SAUDÁVEL \n
         Procure consumir mais frutas, verduras e legumes. Eles ajudam a manter os dentes limpos por
         serem alimentos ricos em fibras. Ajudam também no crescimento e fortalecimento de ossos e
         dentes. Evite alimentos industrializados. Geralmente eles possuem excesso de açúcares e
         gorduras. Comer é muito bom, não é mesmo!? E sabemos que, em tudo na vida, o equilíbrio
         é importante. Todo excesso pode ser prejudicial. Por isso, seja equilibrado quando o assunto
-        é alimentação saudável.
+        é alimentação saudável. \n
+        3 de 4
     </string>
-    <string name="know_more_title_D">REGRA DOS DOCES</string>
     <string name="know_more_content_D">
+        REGRA DOS DOCES \n
         Você já sabe que, em tudo na vida, o equilíbrio é importante e que todo excesso pode ser
         prejudicial. Na infância, um dos alimentos que mais são consumidos pelas crianças são os
         doces. Nas suas mais diversas apresentações: recheados, sorvetes, bombons, chicletes e por
@@ -143,11 +146,15 @@
         guloseimas somente nas festas ou em datas comemorativas. Exemplos: aniversário de
         coleguinhas, familiares, Páscoa, Dia das Crianças, festividades na Escola, Natal. Siga essa
         regra. Você verá os resultados maravilhosos na saúde bucal de sua criança. Lembre sempre
-        disto: cuidar é uma forma de amar, e amar é a melhor forma de educar.
+        disto: cuidar é uma forma de amar, e amar é a melhor forma de educar. \n
+        4 de 4
     </string>
 
-    <string name="advanced_button">Avançar</string>
+    <string name="advanced_button"><![CDATA[>>]]></string>
     <string name="tips_menu">Dicas</string>
     <string name="field_cpf">Informe seu CPF</string>
     <string name="son_permission_denied">Você só pode jogar depois que seu responsável efetuar o cadastro.</string>
+    <string name="father_permission_denied">Você só pode usar esta opção depois que seu filho efetuar o cadastro.</string>
+    <string name="not_enough_phase">Você só pode usar esta opção depois que seu filho avançar de fase.</string>
+    <string name="required_cpf">Informe seu CPF.</string>
 </resources>

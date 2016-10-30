@@ -2,8 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/background_menu"
     android:duration="@android:integer/config_shortAnimTime"
+    android:src="@drawable/background"
     android:windowEnterTransition="@android:transition/slide_right"
     tools:context="br.com.virgiliorximenes.oralhealth.FatherActivity">
 
@@ -21,7 +21,8 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/activity_vertical_margin"
             android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:text="@string/tutorial_partA"
+            android:background="@color/background_button"
+            android:lines="3"
             android:textColor="@android:color/black"
             android:textSize="@dimen/text_size_about"
             android:textStyle="bold" />

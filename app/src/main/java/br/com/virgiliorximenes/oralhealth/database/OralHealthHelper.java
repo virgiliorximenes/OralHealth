@@ -4,15 +4,12 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-/**
- * Created by virgilio on 25/09/16.
- */
-public class OralHealthHelper extends SQLiteOpenHelper {
+class OralHealthHelper extends SQLiteOpenHelper {
 
-    public static final int DATABASE_VERSION = 1;
-    public static final String DATABASE_NAME = "OralHealth.db";
+    private static final int DATABASE_VERSION = 1;
+    private static final String DATABASE_NAME = "OralHealth.db";
 
-    public OralHealthHelper(Context context) {
+    OralHealthHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
