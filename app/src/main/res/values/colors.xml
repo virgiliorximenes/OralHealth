@@ -7,5 +7,5 @@
     <color name="gender_male">#0000FF</color>
     <color name="gender_female">#CC00CC</color>
 
-    <color name="background_button">#AAFFFFFF</color>
+    <color name="background_transparent">#AAFFFFFF</color>
 </resources>

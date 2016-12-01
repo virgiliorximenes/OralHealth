@@ -25,39 +25,41 @@
             android:src="@drawable/background" />
     </RelativeLayout>
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         android:layout_weight="6">
 
-        <Button
+        <TextView
             android:id="@+id/menu_start"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
             android:layout_marginEnd="@dimen/activity_horizontal_margin"
             android:layout_marginTop="@dimen/activity_menu_vertical_margin"
-            android:background="@drawable/button_shape"
+            android:layout_marginBottom="@dimen/activity_menu_vertical_margin"
             android:clickable="true"
             android:text="@string/start_game"
+            android:gravity="center"
             android:textColor="@android:color/black"
             android:textSize="@dimen/text_size_menu"
             android:textStyle="bold|italic" />
 
-        <Button
+        <TextView
             android:id="@+id/about_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="@dimen/activity_menu_vertical_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
             android:layout_marginEnd="@dimen/activity_horizontal_margin"
-            android:background="@drawable/button_shape"
+            android:layout_marginTop="@dimen/activity_menu_vertical_margin"
+            android:layout_marginBottom="@dimen/activity_menu_vertical_margin"
             android:clickable="true"
             android:text="@string/about_button"
+            android:gravity="center"
             android:textColor="@android:color/black"
             android:textSize="@dimen/text_size_menu"
             android:textStyle="bold|italic" />
-    </RelativeLayout>
+    </LinearLayout>
 
 </LinearLayout>

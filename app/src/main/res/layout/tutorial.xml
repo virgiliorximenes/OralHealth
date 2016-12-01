@@ -13,7 +13,7 @@
         android:layout_height="match_parent"
         android:layout_marginEnd="@dimen/activity_horizontal_margin"
         android:layout_marginStart="@dimen/activity_horizontal_margin"
-        android:background="@color/background_button"
+        android:background="@color/background_transparent"
         android:orientation="vertical">
 
         <TextView
@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/activity_vertical_margin"
             android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:background="@color/background_button"
+            android:background="@color/background_transparent"
             android:minLines="3"
             android:textColor="@android:color/black"
             android:textSize="@dimen/text_size_about"
