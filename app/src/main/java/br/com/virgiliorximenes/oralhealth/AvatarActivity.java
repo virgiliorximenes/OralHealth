@@ -3,9 +3,13 @@ package br.com.virgiliorximenes.oralhealth;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import br.com.virgiliorximenes.oralhealth.database.OralHealthDAO;
 import br.com.virgiliorximenes.oralhealth.utils.OralHealthUtilities;
 
 public class AvatarActivity extends Activity implements View.OnClickListener {
@@ -29,7 +33,24 @@ public class AvatarActivity extends Activity implements View.OnClickListener {
             imageView.setImageResource(R.drawable.avatar_girl);
             imageView.setContentDescription(getString(R.string.gender_female));
         } else if (R.id.choose_avatar == view.getId()) {
+
+            EditText editText = (EditText) findViewById(R.id.char_name);
+            String name = editText.getText().toString();
+
+            RadioButton genderFemale = (RadioButton) findViewById(R.id.gender_female);
+            RadioButton genderMale = (RadioButton) findViewById(R.id.gender_male);
+            String gender = genderFemale.isSelected() ? getString(R.string.gender_female) : (genderMale.isSelected() ? getString(R.string.gender_male) : null);
+
+            if (OralHealthUtilities.isEmpty(name)) {
+
+            } else if (OralHealthUtilities.isEmpty(gender)) {
+
+            } else {
+
+            }
+            OralHealthDAO.getInstance(this).insertChild(name, gender);
             Toast.makeText(getApplicationContext(), "Not implement yet!", Toast.LENGTH_SHORT).show();
+
         }
     }
 

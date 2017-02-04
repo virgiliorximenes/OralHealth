@@ -60,7 +60,6 @@ public class MenuActivity extends Activity implements View.OnClickListener {
             OralHealthUtilities.changeScreen(this, AvatarActivity.class);
         } else {
             Toast.makeText(this, R.string.son_permission_denied, Toast.LENGTH_SHORT).show();
-
         }
     }
 
@@ -84,7 +83,7 @@ public class MenuActivity extends Activity implements View.OnClickListener {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                             String cpf = fatherCpf.getText().toString();
-                            if (cpf.trim().isEmpty()) {
+                            if (OralHealthUtilities.isValidCpf(cpf)) {
                                 Toast.makeText(MenuActivity.this, R.string.required_cpf, Toast.LENGTH_SHORT).show();
                             } else {
                                 oralHealthDAO.insertParent(fatherCpf.getText().toString());

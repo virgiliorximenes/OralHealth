@@ -32,4 +32,12 @@ public class OralHealthUtilities {
         activity.finish();
         activity.startActivity(intent);
     }
+
+    public static boolean isValidCpf(String cpf) {
+        return !cpf.isEmpty();
+    }
+
+    public static boolean isEmpty(String param) {
+        return param == null || param.isEmpty();
+    }
 }
