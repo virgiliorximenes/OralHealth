@@ -150,6 +150,7 @@
         4/4
     </string>
 
+    <string name="back_button"><![CDATA[<<]]></string>
     <string name="advanced_button"><![CDATA[>>]]></string>
     <string name="tips_menu">Dicas</string>
     <string name="field_cpf">Informe seu CPF</string>
@@ -157,5 +158,8 @@
     <string name="father_permission_denied">Você só pode usar esta opção depois que seu filho efetuar o cadastro.</string>
     <string name="not_enough_phase">Você só pode usar esta opção depois que seu filho avançar de fase.</string>
     <string name="required_cpf">Informe seu CPF.</string>
-    <string name="person_name">SEU_NOME</string>
+    <string name="person_name">SEU NOME</string>
+
+    <string name="error_name">Informe um nome!</string>
+    <string name="error_gender">Informe um genero!</string>
 </resources>

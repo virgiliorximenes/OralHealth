@@ -6,7 +6,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import br.com.virgiliorximenes.oralhealth.database.OralHealthDAO;
@@ -42,14 +41,14 @@ public class AvatarActivity extends Activity implements View.OnClickListener {
             String gender = genderFemale.isSelected() ? getString(R.string.gender_female) : (genderMale.isSelected() ? getString(R.string.gender_male) : null);
 
             if (OralHealthUtilities.isEmpty(name)) {
-
+                Toast.makeText(this, R.string.error_name, Toast.LENGTH_SHORT).show();
             } else if (OralHealthUtilities.isEmpty(gender)) {
-
+                Toast.makeText(this, R.string.error_gender, Toast.LENGTH_SHORT).show();
             } else {
+                OralHealthDAO.getInstance(this).insertChild(name, gender);
 
+                OralHealthUtilities.changeScreen(this, StoryActivity.class);
             }
-            OralHealthDAO.getInstance(this).insertChild(name, gender);
-            Toast.makeText(getApplicationContext(), "Not implement yet!", Toast.LENGTH_SHORT).show();
 
         }
     }

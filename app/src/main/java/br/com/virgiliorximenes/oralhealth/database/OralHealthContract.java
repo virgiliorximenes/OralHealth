@@ -29,7 +29,7 @@ class OralHealthContract {
         static final String COLUMN_GENDER = "GENERO";
         static final String COLUMN_PHASE = "FASE";
         static final String COLUMN_SCORE = "PONTOS";
-        static final String COLUMN_DAYS_LEFT = "DIAS_REST";
+        static final String COLUMN_INITIAL_DAY = "DIAS_REST";
 
         static final String SQL_CREATE_TABLE = "CREATE TABLE " + ChildMetaData.TABLE_NAME + " ("
                 + ChildMetaData._ID + " " + INTEGER_DATA_TYPE + " PRIMARY KEY, "
@@ -37,7 +37,7 @@ class OralHealthContract {
                 + ChildMetaData.COLUMN_GENDER + " " + TEXT_DATA_TYPE + ", "
                 + ChildMetaData.COLUMN_SCORE + " " + INTEGER_DATA_TYPE + ", "
                 + ChildMetaData.COLUMN_PHASE + " " + INTEGER_DATA_TYPE + ", "
-                + ChildMetaData.COLUMN_DAYS_LEFT + " " + INTEGER_DATA_TYPE + ")";
+                + ChildMetaData.COLUMN_INITIAL_DAY + " " + INTEGER_DATA_TYPE + ")";
 
         static final String SQL_DROP_TABLE = "DROP TABLE IF EXISTS " + ChildMetaData.TABLE_NAME;
     }
