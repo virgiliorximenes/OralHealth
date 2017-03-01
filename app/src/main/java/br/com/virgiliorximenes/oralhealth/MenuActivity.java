@@ -57,7 +57,11 @@ public class MenuActivity extends Activity implements View.OnClickListener {
 
     private void configureSon() {
         if (oralHealthDAO.hasParent()) {
-            OralHealthUtilities.changeScreen(this, AvatarActivity.class);
+            if (oralHealthDAO.hasChild()) {
+                OralHealthUtilities.changeScreen(this, PlayActivity.class);
+            } else {
+                OralHealthUtilities.changeScreen(this, AvatarActivity.class);
+            }
         } else {
             Toast.makeText(this, R.string.son_permission_denied, Toast.LENGTH_SHORT).show();
         }
@@ -124,10 +128,8 @@ public class MenuActivity extends Activity implements View.OnClickListener {
     public void onBackPressed() {
         if (showAbout) {
             initMenu();
-
         } else {
             OralHealthUtilities.closeApp(this);
-
         }
     }
 

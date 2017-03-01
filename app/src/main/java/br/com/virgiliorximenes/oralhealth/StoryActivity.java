@@ -7,6 +7,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import br.com.virgiliorximenes.oralhealth.utils.OralHealthUtilities;
+
 public class StoryActivity extends Activity implements View.OnClickListener {
 
     private int actualPage;
@@ -32,7 +34,7 @@ public class StoryActivity extends Activity implements View.OnClickListener {
 
     private void nextPage() {
         if (actualPage == 7) {
-            Toast.makeText(this, "Mostrar boca", Toast.LENGTH_SHORT).show();
+            OralHealthUtilities.changeScreen(this, PlayActivity.class);
         } else {
             actualPage++;
         }
@@ -71,4 +73,14 @@ public class StoryActivity extends Activity implements View.OnClickListener {
         ((ImageView) findViewById(R.id.story_image)).setImageResource(page);
     }
 
+    @Override
+    public void onBackPressed() {
+        if (actualPage == 0) {
+            OralHealthUtilities.changeScreen(this, AvatarActivity.class);
+        } else {
+            actualPage--;
+            showPage();
+        }
+
+    }
 }
