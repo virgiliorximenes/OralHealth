@@ -65,18 +65,19 @@ public class OralHealthDAO {
 
     public void insertChild(String name, String gender) {
 
-        long now = System.currentTimeMillis();
-
         ContentValues values = new ContentValues();
-        values.put(OralHealthContract.ChildMetaData._ID, now);
+        values.put(OralHealthContract.ChildMetaData._ID, System.currentTimeMillis());
         values.put(OralHealthContract.ChildMetaData.COLUMN_NAME, name);
         values.put(OralHealthContract.ChildMetaData.COLUMN_SCORE, 0);
+        values.put(OralHealthContract.ChildMetaData.COLUMN_SCORE_STAND_BY, 0);
         values.put(OralHealthContract.ChildMetaData.COLUMN_GENDER, gender);
-        values.put(OralHealthContract.ChildMetaData.COLUMN_INITIAL_DAY, now);
+        values.put(OralHealthContract.ChildMetaData.COLUMN_REMAINING_DAYS, 7);
         values.put(OralHealthContract.ChildMetaData.COLUMN_PHASE, 0);
+        values.put(OralHealthContract.ChildMetaData.COLUMN_TIPS_INITIAL, 0);
 
         try (SQLiteDatabase connection = helper.getWritableDatabase()) {
             connection.insert(OralHealthContract.ChildMetaData.TABLE_NAME, null, values);
         }
     }
+
 }
